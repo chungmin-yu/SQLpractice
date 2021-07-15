@@ -1,0 +1,10 @@
+mysql> show global variables like 'local_infile';
+mysql> set global local_infile=on;
+mysql> exit;
+mysql --local_infile=1 -u root -p password DB_name
+LOAD DATA INFILE 'xxx.csv' 
+INTO TABLE TABLE_name 
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
